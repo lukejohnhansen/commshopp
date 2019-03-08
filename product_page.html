@@ -2,32 +2,193 @@
 <html>
   <head>
     <title>CommShopp Products</title>
-    <style>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <style type="text/css">
+			
+			@font-face {
+				font-family: 'fjalla';
+				src: url('homepage/fonts/Fjalla/FjallaOne-Regular.ttf');
+			}
+			@font-face {
+				font-family: 'raleway';
+				src: url('homepage/fonts/raleway/Raleway-Bold.ttf');
+			}
+			@font-face {
+				font-family: 'lovelyBoys';
+				src: url('homepage/fonts/Lovely Boys.otf');
+			}
+
+			hr {
+				position: absolute;
+				width: 50%;
+				margin-left: 25%;
+				top: 55%;
+
+			}
+			.yellow {
+				color: yellow;
+			}
+			
+			.items {
+				position: absolute;
+				background-color: rgb(250, 250, 0, 0.4);
+				width: 20%;
+				height: 150px;
+				display: inline-block;
+				margin-top: 300px;
+			}
+			
+			#item1 {
+				margin-left: 10%;
+			}
+			#item2 {
+				margin-left: 40%;
+			}
+			#item3 {
+				margin-left: 70%;
+			}
+			
+			
+			#logo {
+				width: 200px;
+				position: absolute;
+				top: -60px;
+				left: 20px;
+
+			}
+			nav {
+				display: table;
+				width: 100%;
+				height: 10vh;
+				background-color: rgb(200, 203, 209, 0.9);
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+
+			nav ul {
+				display: table-row;
+			}
+			nav li {
+				display: table-cell;
+				text-align: center;
+				padding-right: 5%;
+				float: right;
+				margin-top: 40px;
+			}
+
+			li a {
+				color: white;
+				text-decoration: none;
+				font-family: fjalla;
+				letter-spacing: 3pt;
+				font-size: 15pt;
+			}
+
+			#container {
+				margin: auto;
+			}
+
 			body {
 				margin: 0;
 				padding: 0;
+				background-image: url(images/ppap.jpg);
+				-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 			}
 			
-			header {
-				background-color: darkgrey;
-				margin: 0;
-				height: 90pt;
+			
+			#title {
+				position: absolute;
+				text-align: center;
+				transform: translate(-50%, -50%);
+				top: 150px;
+				left: 50%;
+				width:100vw;
+				font-size: 30pt;
+				font-family: 'fjalla';
+				color: white;
+				letter-spacing: 3pt;
+				text-shadow: 2px 2px 4px gray;
 			}
-			h1 {
+			.itemName{
+				text-align: center;
 				margin: 0;
-				padding-top: 29pt;
-				padding-left: 25pt;
+				font-size: 15pt;
+				font-family: sans-serif;
+				background-color: rgb(100, 100, 100, 0.7);
+				color: white;
+			}
+			fieldset {
+				text-align: center;
+			}
+			input {
+				width: 40px;
+				text-align: center;
+			}
+			#submit {
+				position: absolute;
+				top: 470px;
+				left:1200px;
+				width: 60px
 			}
     </style>
   </head>
   <body>
 		<header>
-			<h1>CommShopp</h1>
 		</header>
+		<nav class="navbar">
+      <ul>
+        <li><a href="homepage.html"><img id="logo" src="homepage/logos/logo2/logo_transparent.png" alt="logo"></a></li>
+        <li><a href="##">FAQ</a></li>
+        <li><a href="##">About Us</a></li>
+        <li><a href="##">ABC</a></li>
+        <li><a href="##">ABC</a></li>
+      </ul>
+    </nav>
+		<p id="title">CURRENT BUYER: <span class="yellow">LUKE HANSEN</span><br/>PICKUP DATE: <span class="yellow">MONDAY, MARCH 11</span></p>
+	  <form>
+		<div id="item1" class="items">
+			<p class="itemName">Steam Buns</p>
+			<ul>
+				<li>Manufacturer: Buns Co.</li>
+				<li>Type: Frozen</li>
+				<li>Original Package Quantity: 12</li>
+			</ul>
 		
-		<div id="describe">
-			<p>Please pick the items you would like &#91;insert current buyer&#93; to pick up for you on &#91;insert pickup date&#93;:</p>
+				<fieldset>
+					<label>Quantity: </label><input type="number" placeholder="units">
+				</fieldset>	
+		
 		</div>
-		
+		<div id="item2" class="items">
+			<p class="itemName">Bananas</p>
+			<ul>
+				<li>Manufacturer: Dole</li>
+				<li>Type: Organic</li>
+				<li>Original Package Quantity: 4</li>
+			</ul>
+			
+				<fieldset>
+					<label>Quantity: </label><input type="number" placeholder="units">
+				</fieldset>	
+			
+		</div>
+		<div id="item3" class="items">
+			<p class="itemName">Eggs</p>
+			<ul>
+				<li>Manufacturer: Rabbit River Farms.</li>
+				<li>Type: Organic</li>
+				<li>Original Package Quantity: 36</li>
+			</ul>
+			
+				<fieldset>
+					<label>Quantity: </label><input type="number" placeholder="units">
+				</fieldset>	
+		</div>
+			<input id="submit" type="submit" title="submit">
+		</form>
   </body>
 </html>
