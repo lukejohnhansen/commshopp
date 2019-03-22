@@ -162,7 +162,7 @@
         <li><a href="##">ABC</a></li>
       </ul>
     </nav>
-		<p id="title">CURRENT BUYER: <span class="yellow">LUKE HANSEN</span><br/>PICKUP DATE: <span class="yellow">MONDAY, MARCH 11</span></p>
+		<p id="title">CURRENT BUYER: <span id="currentCommLeader" class="yellow"></span><br/>PICKUP DATE: <span id="date" class="yellow"></span></p>
 	  <form>
 		<div id="item1" class="items">
 			<p class="itemName">Steam Buns</p>
@@ -204,5 +204,28 @@
 		</div>
 			<input id="submit" type="submit" title="submit">
 		</form>
+		<script>
+      var currentCommLeader = document.getElementById("currentCommLeader");
+      var dbRef = firebase.database().ref().child("currentCommLeader");
+        dbRef.on (
+          'value',
+          function (snap) {
+              currentCommLeader.innerText = snap.val();
+          });
+      var date = document.getElementById("date");
+      var dbRef2 = firebase.database().ref().child("date");
+        dbRef2.on (
+          'value',
+          function (snap) {
+              date.innerText = snap.val();
+          });
+      var item1 = document.getElementById("item1");
+      var dbRef3 = firebase.database().ref().child("item1");
+        dbRef3.on (
+          'value',
+          function (snap) {
+              item1.innerText = snap.val();
+          });
+    </script>
   </body>
 </html>
