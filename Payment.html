@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment</title>
+		<style>
+			#payment {
+				width: 500px;
+				height: 500px;
+				border: 1px solid black;
+				overflow: hidden;
+			}
+			#inputs {
+				width:25%;
+				margin:0;
+				float:right;
+				display:inline-block;
+			}
+			#labels {
+				width: 12.5%;
+				margin:0;
+				float:left;
+				display:inline-block;
+				overflow: hidden;
+				vertical-align: top;
+			}
+			#printedresult{
+				float:right;
+			}
+		</style>
+	</head>
+	<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<div id = "payment">
+			<form onchange = "expCombine(); updateString(); Name();">
+				<div id = inputs>
+					<input id = "name" type = "text" />
+					<input id = "pnumber" type = "number" required pattern = "[0-9]{10}"/>
+					<input id = "card" type = "number" required pattern = "[0-9]{16}"/>
+					<select name = "expireMM" id = "expireMM">
+					<option value =" ">Month</option>
+					<option value ="01">January</option>
+					<option value ="02">Feburary</option>
+					<option value ="03">March</option>
+					<option value ="04">April</option>
+					<option value ="05">May</option>
+					<option value ="06">June</option>
+					<option value ="07">July</option>
+					<option value ="08">August</option>
+					<option value ="09">September</option>
+					<option value ="10">October</option>
+					<option value ="11">November</option>
+					<option value ="12">December</option>
+				</select>
+				<select name ="expireYY" id = "expireYY">
+					<option value = ''>Year</option>
+					<option value = '19'>2019</option>
+					<option value = '20'>2020</option>
+					<option value = '21'>2021</option>
+					<option value = '22'>2022</option>
+					<option value = '23'>2023</option>
+					<option value = '24'>2024</option>
+				</select>
+				</div>
+				<div id = labels>
+					Name on Card:
+					Phone Number:<br/>
+					Credit Card Number:<br/>
+					Expiry:
+					
+				</div>
+				<div id = printedresult>
+				<br/>
+				<span id = name2>a</span>
+				<br/>
+				<span id = result>b</span>
+				<br/>
+				<span id = expiry>c</span>
+				<br/>
+				</div>
+				<input type = "button" value = "Submit"/>
+			</form>
+		</div>
+		<div id = list>
+		
+		</div>
+		<script>
+			function updateString(){
+				var number = document.getElementById("card").value;
+				var output = number.toString().match(/\d{1,4}/g);
+				var x = output.toString();
+				var output2 = x.replace(/,/g, " ");
+				document.getElementById("result").innerHTML = output2;
+			}
+			
+					function expCombine(){ 
+						var x = document.getElementById("expireMM");
+						var y = document.getElementById("expireYY");
+						document.getElementById("expiry").innerHTML = x.options[x.selectedIndex].value + "/" + y.options[y.selectedIndex].value;
+					}
+			function Name(){
+				var name = document.getElementById("name").value;
+				document.getElementById("name2").innerHTML = name;
+			}
+		</script>
+	</body>
+</html>
