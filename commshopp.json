@@ -1,0 +1,38 @@
+
+{
+	"group1" : {
+		"members" : {
+			"member1" : "member1",
+			"member2" : "member2",
+			"member3" : "member3"
+		},
+		"g1leader" : {
+			"leader_name" : "No Leader",
+			"next_date" : "No Date",
+			"item1" : {
+				"item1Name" : "",
+				"item1Man" : "",
+				"item1Type" : "",
+				"item1Quantity" : 0,
+				"item1Price" : 0,
+				"item1OrderQuantity" : 0
+			},
+			"item2" : {
+				"item2Name" : "",
+				"item2Man" : "",
+				"item2Type" : "",
+				"item2Quantity" : 0,
+				"item2Price" : 0,
+				"item2OrderQuantity" : 0
+			},
+			"item3" : {
+				"item3Name" : "",
+				"item3Man" : "",
+				"item3Type" : "",
+				"item3Quantity" : 0,
+				"item3Price" : 0,
+				"item3OrderQuantity" : 0
+			}
+		}
+	}
+}
