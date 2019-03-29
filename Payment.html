@@ -4,19 +4,18 @@
     <title>Payment</title>
 		<style>
 			#payment {
-				width: 500px;
-				height: 500px;
+				width: 36%;
+				height: 175px;
 				border: 1px solid black;
 				overflow: hidden;
 			}
 			#inputs {
-				width:25%;
+				width:45%;
 				margin:0;
 				float:right;
-				display:inline-block;
 			}
 			#labels {
-				width: 12.5%;
+				width: 36%;
 				margin:0;
 				float:left;
 				display:inline-block;
@@ -24,6 +23,12 @@
 				vertical-align: top;
 			}
 			#printedresult{
+				float:right;
+				position: absolute;
+				top:25%;
+				right:50%;
+			}
+			#submit{
 				float:right;
 			}
 		</style>
@@ -60,24 +65,21 @@
 					<option value = '23'>2023</option>
 					<option value = '24'>2024</option>
 				</select>
+				<br/>
+				<span id = name2></span>
+				<br/>
+				<span id = result></span>
+				<br/>
+				<span id = expiry></span>
+				<br/>
+				<input type = "button" id = "submit" value = "Submit"/>
 				</div>
 				<div id = labels>
 					Name on Card:
 					Phone Number:<br/>
 					Credit Card Number:<br/>
 					Expiry:
-					
 				</div>
-				<div id = printedresult>
-				<br/>
-				<span id = name2>a</span>
-				<br/>
-				<span id = result>b</span>
-				<br/>
-				<span id = expiry>c</span>
-				<br/>
-				</div>
-				<input type = "button" value = "Submit"/>
 			</form>
 		</div>
 		<div id = list>
