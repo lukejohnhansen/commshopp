@@ -219,8 +219,15 @@
     //local variables
 
     // item 1
-		var item1Name = "Steambuns";
-		localStorage.setItem("item1Name", item1Name);
+
+    	var out1 = document.getElementById("item1Name");
+		var db1 = firebase.database().ref().child("group1/g1leader/item1/item1Name");
+		db1.on ("value", snap => out1.innerText = snap.val());
+
+
+
+		//var item1Name = "Steambuns";
+		//localStorage.setItem("item1Name", item1Name);
 		var item1Man = "Buns Co.";
 		localStorage.setItem("item1Man", item1Man);
 		var item1Type = "Frozen";
@@ -254,7 +261,7 @@
 		// append to document
 
 		// item 1
-		$('#item1Name').append(item1Name);
+		//$('#item1Name').append(item1Name);
 		$('#item1Man').append(item1Man);
 		$('#item1Type').append(item1Type);
 		$('#item1Quantity').append(item1Quantity);
