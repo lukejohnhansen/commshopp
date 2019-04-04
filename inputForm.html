@@ -152,11 +152,6 @@
     <header>
     </header>
 
-
-
-
-
-
     <nav class="navbar">
       <ul>
         <li><a href="homepage/homepage.html"><img id="logo" src="homepage/logos/logo2/logo_transparent.png" alt="logo"></a></li>
@@ -169,20 +164,60 @@
     <div id="item1" class="items">
 
       <ul id="formList">
-        <p><label>Item 1: </label><input type="text" name="item1" class="itemInput"/><label class="label">Quantity: </label><input id="item1OrderQuantity" type="number" placeholder="units"></p>
-        <p><label>Item 2: </label><input type="text" name="item2" class="itemInput"/><label class="label">Quantity: </label><input id="item1OrderQuantity" type="number" placeholder="units"></p>
-        <p><label>Item 3: </label><input type="text" name="item3" class="itemInput"/><label class="label">Quantity: </label><input id="item1OrderQuantity" type="number" placeholder="units"></p>
+        <p><label>Item 1: </label><input type="text" name="item1Name" class="itemInput" id="item1Name"/><label class="label">Quantity: </label><input id="item1OrderQuantity" type="number" placeholder="units"></p>
+        <p><label>Item 2: </label><input type="text" name="item2Name" class="itemInput" id="item1Name"/><label class="label">Quantity: </label><input id="item2OrderQuantity" type="number" placeholder="units"></p>
+        <p><label>Item 3: </label><input type="text" name="item3Name" class="itemInput" id="item1Name"/><label class="label">Quantity: </label><input id="item3OrderQuantity" type="number" placeholder="units"></p>
         <p>For how many? <input type="number" name="people" min="2" max="10"/></p>
-        <p><label>Email of person buying:</label><input type="email" name="email" class="itemInput"/></p>
+        <p><label>Email of person buying:</label><input type="email" name="email" class="itemInput" id="email"/></p>
       </ul>
-
+      <input id="submit" type="button" value="submit">
     </div>
 
-      <input id="submit" type="button" value="submit">
+      
     </form>
     <script>
+
+      var db = firebase.database();
+
+      $('#submit').click(function( event ) {
+      var test = $('#item1Name').val();
+      event.preventDefault();
+      console.log(test);
+
+
+
+      //window.location.href = "";
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //local variables
     // item 1
+    /*
     var item1Name = "";
     localStorage.setItem("item1Name", item1Name);
     var item1Man = "Buns Co.";
@@ -241,6 +276,7 @@
     localStorage.setItem('item3OrderQuantity', item3OrderQuantity);
     window.location.href = "Orders/ThankyouPage.html";
     });
+    */
     </script>
   </body>
 </html>

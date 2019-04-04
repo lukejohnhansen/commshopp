@@ -1,38 +1,19 @@
 
 {
-	"group1" : {
-		"members" : {
-			"member1" : "Luke Hansen",
-			"member2" : "Gina Kim",
-			"member3" : "Jeffrey Kuo"
+	"items" : {
+		"item1" : {
+			"item1Name" : "",
+			"item1OrderedQuantity" : 0
 		},
-		"g1leader" : {
-			"leader_name" : "Al Gore Rithem",
-			"next_date" : "March 29th, 2019",
-			"item1" : {
-				"item1Name" : "Steamed Buns",
-				"item1Man" : "Chilly Buns Co.",
-				"item1Type" : "Frozen",
-				"item1Quantity" : 12,
-				"item1Price" : 1.55,
-				"item1OrderQuantity" : 0
-			},
-			"item2" : {
-				"item2Name" : "Bananas",
-				"item2Man" : "Banana Time",
-				"item2Type" : "Organic",
-				"item2Quantity" : 6,
-				"item2Price" : 1.93,
-				"item2OrderQuantity" : 0
-			},
-			"item3" : {
-				"item3Name" : "Eggs",
-				"item3Man" : "Rabbit River Farms",
-				"item3Type" : "Organic",
-				"item3Quantity" : 24,
-				"item3Price" : 0.55,
-				"item3OrderQuantity" : 0
-			}
-		}
+		"item2" : {
+			"item2Name" : "",
+			"item2OrderedQuantity" : 0
+		},
+		"item3" : {
+			"item3Name" : "",
+			"item3OrderedQuantity" : 0
+		},
+		"numOfPeople" : 0,
+		"email" : ""
 	}
 }
