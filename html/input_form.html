@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <title>CommShopp Products</title>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous">
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <script src="../scripts/firebase_script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="../styles/input_form.css" type="text/css" rel="stylesheet">
@@ -22,7 +17,7 @@
       </ul>
     </nav>
     <p id="title">SHOPPING LIST: </p>
-    <form>
+    <form id = submits>
     <div id="item1" class="items">
       <ul id="formList">
         <p><label>Apples </label><label class="label">Quantity:<input id="item1OrderQuantity" class="quantities" type="number" placeholder="units"></label></p>
@@ -33,81 +28,7 @@
       <input id="submit" type="button" value="submit">
     </div>
     </form>
-    <script>
-
-      var db = firebase.database();
-
-      $('#submit').click(function( event ) {
-      var test = $('#item1Name').val();
-      event.preventDefault();
-      console.log(test);
-      });
-
-
-
-
-    //local variables
-    // item 1
-    /*
-    var item1Name = "";
-    localStorage.setItem("item1Name", item1Name);
-    var item1Man = "Buns Co.";
-    localStorage.setItem("item1Man", item1Man);
-    var item1Type = "Frozen";
-    localStorage.setItem("item1Type", item1Type);
-    var item1Quantity = 12;
-    localStorage.setItem("item1Quantity", item1Quantity);
-    var item1Price = 2.75;
-    // item 2
-    var item2Name = "Bananas";
-    localStorage.setItem("item2Name", item2Name);
-    var item2Man = "Dole";
-    localStorage.setItem("item2Man", item2Man);
-    var item2Type = "Non-Organic";
-    localStorage.setItem("item2Type", item2Type);
-    var item2Quantity = 6;
-    localStorage.setItem("item2Quantity", item2Quantity);
-    var item2Price = 0.95;
-    // item 3
-    var item3Name = "Eggs";
-    localStorage.setItem("item3Name", item3Name);
-    var item3Man = "Rabbit River Farm";
-    localStorage.setItem("item3Man", item3Man);
-    var item3Type = "Organic";
-    localStorage.setItem("item3Type", item3Type);
-    var item3Quantity = 24;
-    localStorage.setItem("item3Quantity", item3Quantity);
-    var item3Price = 0.45;
-    // append to document
-    // item 1
-    $('#item1Name').append(item1Name);
-    $('#item1Man').append(item1Man);
-    $('#item1Type').append(item1Type);
-    $('#item1Quantity').append(item1Quantity);
-    $('#item1Price').append(item1Price);
-    // item 2
-    $('#item2Name').append(item2Name);
-    $('#item2Man').append(item2Man);
-    $('#item2Type').append(item2Type);
-    $('#item2Quantity').append(item2Quantity);
-    $('#item2Price').append(item2Price);
-    // item 3
-    $('#item3Name').append(item3Name);
-    $('#item3Man').append(item3Man);
-    $('#item3Type').append(item3Type);
-    $('#item3Quantity').append(item3Quantity);
-    $('#item3Price').append(item3Price);
-    $('#submit').click(function( event ) {
-      event.preventDefault();
-     var item1OrderQuantity = $('#item1OrderQuantity').val();
-     var item2OrderQuantity = $('#item2OrderQuantity').val();
-    var item3OrderQuantity = $('#item3OrderQuantity').val();
-    localStorage.setItem('item1OrderQuantity', item1OrderQuantity);
-    localStorage.setItem('item2OrderQuantity', item2OrderQuantity);
-    localStorage.setItem('item3OrderQuantity', item3OrderQuantity);
-    window.location.href = "Orders/ThankyouPage.html";
-    });
-    */
-    </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../scripts/functions.js"></script>
   </body>
 </html>
