@@ -107,12 +107,16 @@
 
       }
 
-      .itemInput {
-        width: 40%;
-        margin-left: 5%;
-      }
       .label {
+
+        float: right;
+
+      }
+
+      .quantities {
+        width: 20%;
         margin-left: 5%;
+
       }
 
 
@@ -121,4 +125,6 @@
         margin-left: 10%;
         margin-right: 10%;
         font-size: 20pt;
+        font-family: fjalla;
+        letter-spacing: 2pt;
       }
