@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>CommShopp</title>
+    <meta charset='utf-8'/>
+    <link rel='stylesheet' href="../styles/index.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="../scripts/firebase_script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html"><img id="logo" src="../styles/logos/logo2/logo_transparent.png" alt="logo"></a></li>
+        <li><a href="about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div id="container">
+      <div id="phrase">Personalized Quantities for Bulk Prices
+      </div>
+      <hr>
+      <div id="phrase2">More is Less</div>
+    </div>
+    <script>
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  </script>
+
+  <!-- The surrounding HTML is left untouched by FirebaseUI.
+    Your app may use that space for branding, controls and other customizations.-->
+  <h1></h1>
+  <div id="firebaseui-auth-container"></div>
+  <div id="loader"></div>
+
+  <script>
+    var uiConfig = {
+    callbacks: {
+    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+      // User successfully signed in.
+      // Return type determines whether we continue the redirect automatically
+      // or whether we leave that to developer to handle.
+      return true;
+    },
+    uiShown: function() {
+      // The widget is rendered.
+      // Hide the loader.
+      document.getElementById('loader').style.display = 'none';
+    }
+  },
+  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+  signInFlow: 'popup',
+  signInSuccessUrl: 'input_form.html',
+  signInOptions: [
+
+    // Leave the lines as is for the providers you want to offer your users.
+    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+  ],
+  // Terms of service url.
+  tosUrl: 'input_form.html',
+  // Privacy policy url.
+  privacyPolicyUrl: 'input_form.html'
+  };
+  </script>
+  <script>
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+  </body>
+</html>

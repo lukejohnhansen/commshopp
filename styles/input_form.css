@@ -1,0 +1,124 @@
+
+      @font-face {
+        font-family: 'fjalla';
+        src: url('../styles/fonts/Fjalla/FjallaOne-Regular.ttf');
+      }
+      @font-face {
+        font-family: 'raleway';
+        src: url('../styles/fonts/raleway/Raleway-Bold.ttf');
+      }
+      @font-face {
+        font-family: 'lovelyBoys';
+        src: url('../styles/fonts/Lovely Boys.otf');
+      }
+      hr {
+        position: absolute;
+        width: 50%;
+        margin-left: 25%;
+        top: 55%;
+      }
+      .yellow {
+        color: yellow;
+      }
+
+      .items {
+        position: absolute;
+        background-color: rgb(250, 250, 0, 0.4);
+        width: 70%;
+        height: 60%;
+        margin-left: 14%;
+        margin-right: 10%;
+        margin-top: 15%;
+      }
+
+      #logo {
+        width: 200px;
+        position: absolute;
+        top: -60px;
+        left: 20px;
+      }
+      nav {
+        display: table;
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(200, 203, 209, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      nav ul {
+        display: table-row;
+      }
+      nav li {
+        display: table-cell;
+        text-align: center;
+        padding-right: 5%;
+        float: right;
+        margin-top: 40px;
+      }
+      li a {
+        color: white;
+        text-decoration: none;
+        font-family: fjalla;
+        letter-spacing: 3pt;
+        font-size: 15pt;
+      }
+      #container {
+        margin: auto;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(../styles/images/ppap.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+
+      #title {
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        top: 150px;
+        left: 50%;
+        width:100vw;
+        font-size: 30pt;
+        font-family: 'fjalla';
+        color: white;
+        letter-spacing: 3pt;
+        text-shadow: 2px 2px 4px gray;
+      }
+
+      fieldset {
+        text-align: center;
+      }
+      input {
+        width: 40px;
+        text-align: center;
+      }
+      #submit {
+        position: absolute;
+        top: 80%;
+        left:1000px;
+        width: 100px;
+        font-size: 60pt;
+
+      }
+
+      .itemInput {
+        width: 40%;
+        margin-left: 5%;
+      }
+      .label {
+        margin-left: 5%;
+      }
+
+
+      #formList {
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 20pt;
+      }

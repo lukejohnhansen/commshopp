@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  	<title>Thank you</title>
+  	<meta charset='utf-8'/>
+  	<link rel='stylesheet' href="../styles/thank_you.css">
+  	<script
+	  src="https://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous">
+	</script>
+	<script src="../scripts/firebase_script.js"></script>
+	</head>
+	<body>
+		<nav class="navbar">
+	      <ul>
+	        <li><a href="index.html"><img id="logo" src="../styles/logos/logo2/logo_transparent.png" alt="logo"></a></li>
+	        <li><a href="about_us.html">About Us</a></li>
+	      </ul>
+	    </nav>
+		<div id = "backgroundborder">
+		<h2 id = "Title">Thank you for your Order:</h2>
+		<ul id = "list">
+			<li id ="orderedItem1" class = "list"></li>
+			<li id ="orderedItem2" class = "list"></li>
+			<li id ="orderedItem3" class = "list"></li>
+		</ul>
+		<p id = "funfact">You've helped the enviornment by decreasing ______ this much waste!</p>
+		</div>
+		<script>
+			var item1OrderQuantity = localStorage.getItem('item1OrderQuantity');
+			var item1Name = localStorage.getItem('item1Name');
+			$('#orderedItem1').append(item1OrderQuantity + " " + item1Name);
+
+			var item2OrderQuantity = localStorage.getItem('item2OrderQuantity');
+			var item2Name = localStorage.getItem('item2Name');
+			$('#orderedItem2').append(item2OrderQuantity + " " + item2Name);
+
+			var item3OrderQuantity = localStorage.getItem('item3OrderQuantity');
+			var item3Name = localStorage.getItem('item3Name');
+			$('#orderedItem3').append(item3OrderQuantity + " " + item3Name);
+		</script>
+	</body>
+</html>
+		

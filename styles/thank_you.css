@@ -1,0 +1,79 @@
+body {
+	background-image: url(../styles/images/background.jpg);
+	background-size: cover;
+	height: 100vh;
+	background-repeat: no-repeat;
+}
+@font-face {
+  font-family: 'fjalla';
+  src: url('../styles/fonts/Fjalla/FjallaOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url('../styles/fonts/raleway/Raleway-Bold.ttf');
+}
+@font-face {
+  font-family: 'lovelyBoys';
+  src: url('../styles/fonts/Lovely Boys.otf');
+}
+
+#Title {
+	font-family: lovelyBoys;
+	font-size: 25pt;
+	text-align: center;
+}
+#list{
+	font-family: fjalla;
+	text-align: center;
+	font-size: 20pt;
+	list-style: none;
+}
+#backgroundborder{
+	position:absolute;
+	top: 25%;
+	left: 22%;
+	background-color: rgb(200, 203, 209, 0.9);
+	width: 57%;
+	height: 57%;
+}
+.list{
+	margin: 50px 0;
+}
+#funfact{
+	font-family: fjalla;
+	text-align: center;
+	font-size: 20pt;
+}
+nav {
+  display: table;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(200, 203, 209, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav ul {
+  display: table-row;
+}
+nav li {
+  display: table-cell;
+  text-align: center;
+  padding-right: 5%;
+  float: right;
+  margin-top: 40px;
+}
+#logo {
+  width: 200px;
+  position: absolute;
+  top: -60px;
+  left: 20px;
+}
+li a {
+  color: white;
+  text-decoration: none;
+  font-family: fjalla;
+  letter-spacing: 3pt;
+  font-size: 15pt;
+}
