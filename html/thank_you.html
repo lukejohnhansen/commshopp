@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-  	<title>Thank you</title>
-  	<meta charset='utf-8'/>
-  	<link rel='stylesheet' href="../styles/thank_you.css">
-  	<script
-	  src="https://code.jquery.com/jquery-3.3.1.js"
-	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-	  crossorigin="anonymous">
-	</script>
-	<script src="../scripts/firebase_script.js"></script>
+    <title>Thank you</title>
+    <meta charset='utf-8'/>
+    <link rel='stylesheet' href="../styles/thank_you.css">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script src="../scripts/firebase_script.js"></script>
 
 
-	<!-- <script src="../scripts/firebase_script.js"></script> -->
-	</head>
-	<body>
-		<nav class="navbar">
-	      <ul>
-	        <li><a href="index.html"><img id="logo" src="../styles/logos/logo2/logo_transparent.png" alt="logo"></a></li>
-	        <li><a href="about_us.html">About</a></li>
-	      </ul>
-	    </nav>
-		<div id = "backgroundborder">
-		<h2 id = "Title">Thank you for your Order:</h2>
-		<ul id = "list">
-			<li id ="orderedItem1" class = "list"></li>
-			<li id ="orderedItem2" class = "list"></li>
-			<li id ="orderedItem3" class = "list"></li>
-		</ul>
-		<p id = "sendEmail">
-		</div>
-		<script>
-			var item1OrderQuantity = localStorage.getItem('item1OrderQuantity');
-			var item1Name = localStorage.getItem('item1Name');
-			$('#orderedItem1').append(item1OrderQuantity + " Apples");
+  <!-- <script src="../scripts/firebase_script.js"></script> -->
+  </head>
+  <body>
+    <nav class="navbar">
+        <ul>
+          <li><a href="index.html"><img id="logo" src="../styles/logos/logo2/logo_transparent.png" alt="logo"></a></li>
+          <li><a href="about_us.html">About</a></li>
+        </ul>
+      </nav>
+    <div id = "backgroundborder">
+    <h2 id = "Title">You Added:</h2>
+    <ul id = "list">
+      <li id ="orderedItem1" class = "list"></li>
+      <li id ="orderedItem2" class = "list"></li>
+      <li id ="orderedItem3" class = "list"></li>
+    </ul>
+      <p id = "sendEmail"></p>
+    </div>
+    <script>
+      var item1OrderQuantity = localStorage.getItem('item1OrderQuantity');
+      var item1Name = localStorage.getItem('item1Name');
+      $('#orderedItem1').append(item1OrderQuantity + " Apples");
 
-			var item2OrderQuantity = localStorage.getItem('item2OrderQuantity');
-			var item2Name = localStorage.getItem('item2Name');
-			$('#orderedItem2').append(item2OrderQuantity + " Steamed Buns");
+      var item2OrderQuantity = localStorage.getItem('item2OrderQuantity');
+      var item2Name = localStorage.getItem('item2Name');
+      $('#orderedItem2').append(item2OrderQuantity + " Steamed Buns");
 
-			var item3OrderQuantity = localStorage.getItem('item3OrderQuantity');
-			var item3Name = localStorage.getItem('item3Name');
-			$('#orderedItem3').append(item3OrderQuantity + " Eggs");
-
-
-			var userEmail = firebase.database().ref("Users/");
+      var item3OrderQuantity = localStorage.getItem('item3OrderQuantity');
+      var item3Name = localStorage.getItem('item3Name');
+      $('#orderedItem3').append(item3OrderQuantity + " Eggs");
 
 
-			$('#sendEmail').append('<a href="mailto:'+userEmail+'?subject=Your%20CommShopp%20List&amp;body=Apples:%20'+item1OrderQuantity+',%20Eggs%20'+item2OrderQuantity+',%20Steamed%20Buns:%20'+item3OrderQuantity+'"><input id="submit" type="button" value="submit">Email me my Grocery List</a>');
-		</script>
-	</body>
+
+
+
+
+      /*
+
+      var userEmail = firebase.database().ref("Users/");
+
+      $('#sendEmail').append('<a href="mailto:'+userEmail+'?subject=Your%20CommShopp%20List&amp;body=Apples:%20'+item1OrderQuantity+',%20Eggs%20'+item2OrderQuantity+',%20Steamed%20Buns:%20'+item3OrderQuantity+'"><input id="submit" type="button" value="submit">Email me my Grocery List</a>');
+      */
+
+    </script>
+  </body>
 </html>
-		
