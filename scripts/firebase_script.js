@@ -11,8 +11,7 @@ firebase.initializeApp(config);
 
 
 
-
-    var firebase = app_firebase;
+ var firebase = app_firebase;
 
     // for the current user
     // create this user node in the datebase
@@ -20,8 +19,7 @@ firebase.initializeApp(config);
     firebase.auth().onAuthStateChanged(function(user){
         firebase.database().ref("users/"+user.uid).update(
     {
-        "name":user.displayName,
+        "username":user.displayName,
          "email":user.email
         });
     });
-
