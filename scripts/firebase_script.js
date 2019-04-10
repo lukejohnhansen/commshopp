@@ -9,9 +9,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-
-
-
     var firebase = app_firebase;
 
     // for the current user
