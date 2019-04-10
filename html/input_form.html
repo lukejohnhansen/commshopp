@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <title>CommShopp Products</title>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous">
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <script src="../scripts/firebase_script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="../styles/input_form.css" type="text/css" rel="stylesheet">
@@ -22,7 +17,7 @@
       </ul>
     </nav>
     <p id="title">SHOPPING LIST: </p>
-    <form>
+    <form id = submits>
     <div id="item1" class="items">
       <ul id="formList">
         <p><label>Apples </label><label class="label">Quantity:<input id="item1OrderQuantity" class="quantities" type="number" placeholder="units"></label></p>
@@ -33,6 +28,7 @@
       <input id="submit" type="button" value="submit">
     </div>
     </form>
+<<<<<<< HEAD
     <script>
 
       var db = firebase.database();
@@ -108,5 +104,9 @@
     });
     */
     </script>
+=======
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../scripts/functions.js"></script>
+>>>>>>> a4ba238ccd94f273b2666c2d5f70a7472a07e563
   </body>
 </html>

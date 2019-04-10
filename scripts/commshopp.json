@@ -2,16 +2,16 @@
 {
 	"items" : {
 		"item1" : {
-			"item1Name" : "",
-			"item1OrderedQuantity" : 0
+			"Name" : "",
+			"Quantity" : 0
 		},
 		"item2" : {
-			"item2Name" : "",
-			"item2OrderedQuantity" : 0
+			"Name" : "",
+			"Quantity" : 0
 		},
 		"item3" : {
-			"item3Name" : "",
-			"item3OrderedQuantity" : 0
+			"Name" : "",
+			"Quantity" : 0
 		},
 		"numOfPeople" : 0,
 		"email" : ""
