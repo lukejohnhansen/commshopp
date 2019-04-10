@@ -42,19 +42,25 @@
       var item3OrderQuantity = localStorage.getItem('item3OrderQuantity');
       var item3Name = localStorage.getItem('item3Name');
       $('#orderedItem3').append(item3OrderQuantity + " Eggs");
+		</script>
+		<script>
+			 firebase.auth().onAuthStateChanged(function(user){
+        firebase.database().ref("users/"+user.uid).on(
+    {
+			email = user.uid.email
+       $('#sendEmail').append(email);
+        });
+    });
+		</script>
 
 
 
-
-
-
-      /*
+      <!--//**
 
       var userEmail = firebase.database().ref("Users/");
 
       $('#sendEmail').append('<a href="mailto:'+userEmail+'?subject=Your%20CommShopp%20List&amp;body=Apples:%20'+item1OrderQuantity+',%20Eggs%20'+item2OrderQuantity+',%20Steamed%20Buns:%20'+item3OrderQuantity+'"><input id="submit" type="button" value="submit">Email me my Grocery List</a>');
-      */
+      **/-->
 
-    </script>
   </body>
 </html>

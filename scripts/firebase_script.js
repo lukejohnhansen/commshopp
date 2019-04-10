@@ -9,7 +9,13 @@ var config = {
 };
 firebase.initializeApp(config);
 
+<<<<<<< HEAD
     var firebase = app_firebase;
+=======
+
+
+ var firebase = app_firebase;
+>>>>>>> 71b5fb91c2de311dd9b80de0e3a29ca628040621
 
     // for the current user
     // create this user node in the datebase
@@ -17,8 +23,7 @@ firebase.initializeApp(config);
     firebase.auth().onAuthStateChanged(function(user){
         firebase.database().ref("users/"+user.uid).update(
     {
-        "name":user.displayName,
+        "username":user.displayName,
          "email":user.email
         });
     });
-
