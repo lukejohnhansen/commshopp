@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-    <title>CommShopp Products</title>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
     <script src="../scripts/firebase_script.js"></script>
+
+    <title>CommShopp Products</title>
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -16,7 +18,7 @@
     </header>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html"><img id="logo" src="../styles/logos/logo2/logo_transparent.png" alt="logo"></a></li>
+        <li><a href="../index.html"><img id="logo" src="../styles/logos/logo2/logo_transparent.png" alt="logo"></a></li>
         <li><a href="about_us.html">About</a></li>
       </ul>
     </nav>
@@ -34,29 +36,16 @@
     </form>
     <script>
 
-
-   /*   var db = firebase.database();
+/*
+      var db = firebase.database();
 
       $('#submit').click(function( event ) {
       var test = $('#item1Name').val();
       event.preventDefault();
       console.log(test);
       }); *
-=======
-      //var db = firebase.database();
-
-      //$('#submit').click(function( event ) {
-      //var test = $('#item1Name').val();
-      //event.preventDefault();
-      //console.log(test);
-      //});
->>>>>>> 3b993bfbabe781fee6fbed4a727cc0d2dff71e99
-
-
-
-    //local variables
-    // item 1
-    /*
+ 
+    
     var item1Name = "";
     localStorage.setItem("item1Name", item1Name);
     var item1Man = "Buns Co.";
@@ -105,9 +94,9 @@
     $('#item3Type').append(item3Type);
     $('#item3Quantity').append(item3Quantity);
     $('#item3Price').append(item3Price);
-    */
+    
 
-    // login/signin creates user and pulls name from firebase and displays on navbar.
+    // login/signin creates user and pulls name from firebase
         var userName;
         var userEmail;
         var userID;
@@ -130,6 +119,7 @@
             console.log(userEmail);
           }
         });
+        */
 
 
 
@@ -165,8 +155,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../scripts/functions.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../scripts/functions.js"></script>
 
   </body>
 </html>

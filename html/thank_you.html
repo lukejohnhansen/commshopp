@@ -14,13 +14,12 @@
 
 
 
-  <!-- <script src="../scripts/firebase_script.js"></script> -->
   </head>
   <body>
     <nav class="navbar">
         <ul>
           <li><a href="index.html"><img id="logo" src="../styles/logos/logo2/logo_transparent.png" alt="logo"></a></li>
-          <li><a href="about_us.html">About</a></li>
+          <li><a href="../about_us.html">About</a></li>
         </ul>
       </nav>
     <div id = "backgroundborder">
@@ -75,7 +74,7 @@
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           var out = document.getElementById("sendEmail");
-          $('#sendEmail').append(userEmail);
+          $('#sendEmail').append('<a href="mailto:'+userEmail+'?subject=Your%20CommShopp%20List&amp;body=Apples:%20'+item1OrderQuantity+',%20Eggs%20'+item2OrderQuantity+',%20Steamed%20Buns:%20'+item3OrderQuantity+'">Email me my Grocery List</a>');
         } else {
           $('#sendEmail').append("No Email");
         }
