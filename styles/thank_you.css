@@ -1,8 +1,8 @@
 body {
-	background-image: url(../styles/images/background.jpg);
-	background-size: cover;
-	height: 100vh;
-	background-repeat: no-repeat;
+  background-image: url(../styles/images/background.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 @font-face {
   font-family: 'fjalla';
@@ -19,31 +19,37 @@ body {
 }
 
 #Title {
-	font-family: lovelyBoys;
-	font-size: 25pt;
-	text-align: center;
+  font-family: lovelyBoys;
+  font-size: 25pt;
+  text-align: center;
 }
 #list{
-	font-family: fjalla;
-	text-align: center;
-	font-size: 20pt;
-	list-style: none;
+  font-family: fjalla;
+  text-align: center;
+  font-size: 20pt;
+  list-style: none;
 }
 #backgroundborder{
-	position:absolute;
-	top: 25%;
-	left: 22%;
-	background-color: rgb(200, 203, 209, 0.9);
-	width: 57%;
-	height: 57%;
+  position:absolute;
+  top: 25%;
+  left: 22%;
+  background-color: rgb(200, 203, 209, 0.9);
+  width: 57%;
+  height: 57%;
+}
+
+#sendEmail {
+  font-family: fjalla;
+  text-align: center;
+  font-size: 20pt;
 }
 .list{
-	margin: 50px 0;
+  margin: 50px 0;
 }
 #funfact{
-	font-family: fjalla;
-	text-align: center;
-	font-size: 20pt;
+  font-family: fjalla;
+  text-align: center;
+  font-size: 20pt;
 }
 nav {
   display: table;

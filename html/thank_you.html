@@ -3,6 +3,7 @@
   <head>
     <title>Thank you</title>
     <meta charset='utf-8'/>
+      <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <link rel='stylesheet' href="../styles/thank_you.css">
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
@@ -10,6 +11,7 @@
     crossorigin="anonymous">
   </script>
   <script src="../scripts/firebase_script.js"></script>
+
 
 
   <!-- <script src="../scripts/firebase_script.js"></script> -->
@@ -42,16 +44,57 @@
       var item3OrderQuantity = localStorage.getItem('item3OrderQuantity');
       var item3Name = localStorage.getItem('item3Name');
       $('#orderedItem3').append(item3OrderQuantity + " Eggs");
-		</script>
-		<script>
-			 firebase.auth().onAuthStateChanged(function(user){
+    </script>
+
+    <script>
+
+
+       // login/signin creates user and pulls name from firebase and displays on navbar.
+        var userName;
+        var userEmail;
+        var userID;
+        function createUser(userName, userEmail, userID){
+
+                  firebase.database().ref('Users/' + userID).set({
+                    username: userName,
+                    email: userEmail
+                  });
+
+
+        }
+        //grabs user info on login or signup
+        firebase.auth().onAuthStateChanged(function(user) {
+          if(user){
+            userName = user.displayName;
+            userEmail = user.email;
+            userID = user.uid;
+            createUser(userName, userEmail, userID);
+            console.log(userEmail);
+          }
+        });
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          var out = document.getElementById("sendEmail");
+          $('#sendEmail').append(userEmail);
+        } else {
+          $('#sendEmail').append("No Email");
+        }
+      });
+
+    </script>
+
+    <!--
+    <script>
+
+ firebase.auth().onAuthStateChanged(function(user){
         firebase.database().ref("users/"+user.uid).on(
     {
-			email = user.uid.email
+      email = user.uid.email
        $('#sendEmail').append(email);
         });
     });
-		</script>
+    </script>
+-->
 
 
 
