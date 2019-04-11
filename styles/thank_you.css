@@ -42,9 +42,12 @@ body {
   font-family: fjalla;
   text-align: center;
   font-size: 20pt;
+	padding: 0pt;
+	margin: 0pt;
 }
 .list{
   margin: 50px 0;
+	margin-bottom: 0pt;
 }
 #funfact{
   font-family: fjalla;
@@ -82,4 +85,7 @@ li a {
   font-family: fjalla;
   letter-spacing: 3pt;
   font-size: 15pt;
+}
+#sendEmail a {
+	color:black;
 }
