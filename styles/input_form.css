@@ -23,7 +23,8 @@
 
       .items {
         position: absolute;
-        background-color: rgb(255, 253, 208, 0.9);
+				background-color:lightgray;
+        /**background-color: rgb(255, 253, 208, 0.9);**/
         width: 70%;
         height: 60%;
         margin-left: 14%;
@@ -120,7 +121,6 @@
         margin-left: 5%;
 
       }
-
 
       #formList {
         margin-top: 10%;
